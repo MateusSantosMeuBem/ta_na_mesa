@@ -50,10 +50,11 @@ class Service:
 
         columns = cls.getColumnNames(model, do_not_edit)
         print('\n[TODOS OS ITEMS]')
+        print('    ' + ' | '.join([f'{column:<20}' for column in columns]))
+        print('-'*100)
         for item in items:
-            print(f'[{item.id}]', end='')
-            for column in columns:
-                print(f' | {getattr(item, column)}')
+            print(f'{f"[{item.id}]":<4}', end='')
+            print(' | '.join([f'{getattr(item, column):<20}' for column in columns]))
         item_id = input('Digite o ID do item que deseja editar: ')
 
         item = session.query(model).filter_by(id=item_id).one()
