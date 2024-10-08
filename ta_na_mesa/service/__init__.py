@@ -32,7 +32,7 @@ class Service:
                     continue
                 print(f' | {getattr(item, column):<20}', end='')
             print()
-    
+
     @staticmethod
     def getColumnNames(model, ignore_columns = []):
         return [

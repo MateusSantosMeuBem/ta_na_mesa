@@ -3,6 +3,7 @@ from functools import partial
 from sqlalchemy.orm import sessionmaker
 from model import engine
 
+from service.carrinho import Carrinho
 from model.receita import Receita
 from model.refeicao import Refeicao
 from model.produto import Produto
@@ -22,11 +23,13 @@ class Menu:
             'adicionar': partial(RefeicaoService.adicionar, session, Refeicao),
             'listar': partial(RefeicaoService.listar, session, Refeicao),
             'editar': partial(RefeicaoService.editar, session, Refeicao),
+            'adicionar receita': partial(RefeicaoService.adicionar_receita, session, Refeicao, Receita),
         },
         'receita': {
             'adicionar': partial(ReceitaService.adicionar, session, Receita),
             'listar': partial(ReceitaService.listar, session, Receita),
             'editar': partial(ReceitaService.editar, session, Receita),
+            'adicionar produto': partial(ReceitaService.adicionar_produto, session, Receita, Produto),
         },
         'produto': {
             'adicionar': partial(ProdutoService.adicionar, session, Produto),
@@ -37,6 +40,9 @@ class Menu:
             'adicionar': partial(UnidadeService.adicionar, session, Unidade),
             'listar': partial(UnidadeService.listar, session, Unidade),
             'editar': partial(UnidadeService.editar, session, Unidade),
+        },
+        'carrinho': {
+            'gerar': partial(Carrinho.gerar_carrinho, session),
         },
     }
 

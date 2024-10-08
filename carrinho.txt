@@ -1,0 +1,49 @@
+As receitas geradas são: Carne moída, Frango guisado, Frango guisado.
+
+-------------------------
+Resumo das compras:
+- Arroz: 3.0kg
+- Sal: 0.50kg
+- Alho: 0.50g
+- Carne moída: 1.2kg
+- Frango: 2.45kg
+- Batata: 0.7kg
+- Cenoura: 0.7kg
+
+-------------------------
+Detalhes das receitas:
+* Carne moída (3x)
+  - Arroz
+    | Arroz (0.3kg)
+    | Sal (0.05kg)
+    | Alho (0.05g)
+
+  - Carne moída
+    | Carne moída (0.4kg)
+
+* Frango guisado (4x)
+  - Arroz
+    | Arroz (0.3kg)
+    | Sal (0.05kg)
+    | Alho (0.05g)
+
+  - Frango guisado
+    | Frango (0.35kg)
+
+  - Legumes guisados
+    | Batata (0.1kg)
+    | Cenoura (0.1kg)
+
+* Frango guisado (3x)
+  - Frango guisado
+    | Frango (0.35kg)
+
+  - Legumes guisados
+    | Batata (0.1kg)
+    | Cenoura (0.1kg)
+
+  - Arroz
+    | Arroz (0.3kg)
+    | Sal (0.05kg)
+    | Alho (0.05g)
+
