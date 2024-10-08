@@ -48,6 +48,7 @@ class Menu:
 
     @classmethod
     def run(cls):
+        cls.clear_terminal()
         while True:
             print('\n--- Menu Principal ---')
             for i, (item, _) in enumerate(cls.opcoes.items(), start=1):
@@ -61,6 +62,7 @@ class Menu:
                 print('Saindo...')
                 break
             elif escolha.isdigit() and int(escolha) in range(1, i+1):
+                cls.clear_terminal()
                 categoria = list(cls.opcoes.keys())[int(escolha)-1]
                 print(f'\n--- Menu {categoria.capitalize()} ---')
                 sub_opcoes = cls.opcoes[categoria]
@@ -75,3 +77,8 @@ class Menu:
                     print('Opção inválida. Tente novamente.')
             else:
                 print('Opção inválida. Tente novamente.')
+
+    @staticmethod
+    def clear_terminal():
+        import os
+        os.system('cls' if os.name == 'nt' else 'clear')

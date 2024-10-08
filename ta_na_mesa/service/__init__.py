@@ -23,7 +23,7 @@ class Service:
         items = session.query(model).all()
         if items:
             columns = cls.getColumnNames(model, columns_to_ignore)
-            print('[TODOS OS ITEMS]')
+            print('\n[TODOS OS ITEMS]')
 
         for item in items:
             for column in columns:
@@ -49,7 +49,7 @@ class Service:
             return
 
         columns = cls.getColumnNames(model, do_not_edit)
-        print('[TODOS OS ITEMS]')
+        print('\n[TODOS OS ITEMS]')
         for item in items:
             print(f'[{item.id}]', end='')
             for column in columns:
